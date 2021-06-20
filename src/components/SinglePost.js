@@ -40,7 +40,7 @@ export default function SinglePost(){
     return(
         <section>
             <Helmet>
-                <title>MJ - Book | {singlePost.title}</title>
+                <title>MJ - Book | {singlePost.title} </title>
                 <meta charset="UTF-8" />
                 <meta name="description" content="MJ - Book | Single Post" />
                 <meta name="keywords" content="SingleP ost" />
