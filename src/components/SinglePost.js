@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {Helmet} from 'react-helmet';
 import { useParams   } from 'react-router-dom';
 import sanityClient from '../client.js';
 import imageUrlBuilder from '@sanity/image-url';
@@ -37,6 +38,13 @@ export default function SinglePost(){
     if(!singlePost) return <div>Loading...</div>
 
     return(
+        <section>
+            <Helmet>
+                <title>MJ - Book | {singlePost.title}</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MJ - Book | Single Post" />
+                <meta name="keywords" content="SingleP ost" />
+                </Helmet>
         <main className="bg-gray-200 min-h-screen p-12">
             <article className="container mx-auto bg-green-100 rounded-lg">
                 <header className="relative">
@@ -56,5 +64,7 @@ export default function SinglePost(){
                 </div>
             </article>
         </main>
+        </section>
+
     )
 }

@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Helmet} from 'react-helmet';
 import sanityClient  from '../client.js';
 import plumeria from '../images/home.jpeg';
 import imageUrlBuilder from '@sanity/image-url';
@@ -24,6 +25,13 @@ export default function About(){
     if(!author) return <div>Loading...</div>;
 
     return(
+        <section>
+            <Helmet>
+                <title>MJ - Book | About Me</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MJ - Book | About Me" />
+                <meta name="keywords" content="About Me" />
+                </Helmet>
         <main className="relative">
             <img src={plumeria} alt="Plumeria Flower" className="absolute w-full" />
             <div className="p-10 lg:pt-48 container mx-auto relative">
@@ -38,5 +46,7 @@ export default function About(){
                 </section>
             </div>
         </main>
+        </section>
+
     );
 }

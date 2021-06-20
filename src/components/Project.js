@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Helmet} from 'react-helmet';
 import sanityClient from '../client.js';
 
 export default function Project(){
@@ -19,6 +20,13 @@ export default function Project(){
     },[]);
 
     return(
+        <section>
+            <Helmet>
+                <title>MJ - Book | Projects</title>
+                <meta charset="UTF-8" />
+                <meta name="description" content="MJ - Book | Projects" />
+                <meta name="keywords" content="Projects" />
+                </Helmet>
        <main className="bg-green-100 min-h-screen p-12">
            <section className="container mx-auto">
                 <h1 className="text-5xl flex justify-center cursive">My Projects</h1>
@@ -41,5 +49,7 @@ export default function Project(){
                 </section>
            </section>
        </main>
+       </section>
+
     )
 }
